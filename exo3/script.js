@@ -2,6 +2,7 @@
 const openModalButtons = document.querySelectorAll('[data-modal-target]');
 const closeModalButtons = document.querySelectorAll('[data-close-button]');
 const overlay = document.getElementById('overlay');
+
 const citations = [
     'Si je suis venu au monde, ce n’est pas pour le transformer en un lieu où il fasse bon vivre, mais pour y vivre.    Henry David Thoreau',
     'L’élite n’est, matériellement, ni plus avisée ni meilleure que la masse.    Henry David Thoreau',
@@ -16,7 +17,7 @@ const citations = [
 ]
                 
 
-const citation = document.getElementById('citation').innerHTML;
+const citation = document.getElementById('citation');
 
 // var author = document.getElementById('author').innerHTML; 
 
@@ -36,6 +37,7 @@ overlay.addEventListener('click', () => {
   })
 })
 
+//fermer la modal via boutton
 closeModalButtons.forEach(button => {
   button.addEventListener('click', () => {
     const modal = button.closest('.modal');
@@ -43,14 +45,14 @@ closeModalButtons.forEach(button => {
   })
 })
 
-//cette fonction permet d'afficher une citation random
+//cette fonction permet d'afficher une citation random à partir du array citations
 function showCitation(){
     
     let newCitation = 'En tuant le temps, on blesse l’éternité.    Henry David Thoreau';
     for (let i =0; i < citations.length; i++) {
         newCitation = citations[Math.floor(Math.random() * citations.length )];
     }
-    citations.value = newCitation;
+    citation.innerHTML = newCitation;
     console.log(newCitation);
     
 }
@@ -61,7 +63,7 @@ function openModal(modal) {
   overlay.classList.add('active');
 }
 
-// cette fonction permet de fermer le modal 
+// cette fonction permet de fermer le modal sans boutton
 function closeModal(modal) {
   if (modal == null) return
   modal.classList.remove('active');
