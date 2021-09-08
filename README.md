@@ -12,4 +12,6 @@ Création d’un convertisseur qui transforme les degrés Celsius en Fahrenheit 
 Création d’un générateur de citations dans une Pop-up/Modal (pop-up activante et désactivable au click)
 
 ### -Exercice 4 /3pts 
-Création d’un DarkMode, qui varie en mode jour ou nuit l’ensemble du style sur votre page-Exercice 5 /3ptsCrée un burger menu, qui au click de son icon s’ouvre et se referme. 
+Création d’un DarkMode, qui varie en mode jour ou nuit l’ensemble du style sur votre page-
+### Exercice 5 /3pts
+Crée un burger menu, qui au click de son icon s’ouvre et se referme. 
